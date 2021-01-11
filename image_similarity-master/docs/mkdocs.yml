@@ -1,0 +1,32 @@
+site_name: Image Similarity Docs
+theme:
+  name: "material"
+  palette:
+    primary: "dark-blue"
+    accent: "dark-blue"
+  features:
+    - navigation.expand
+
+docs_dir: templates
+repo_url: https://github.com/oke-aditya/image_similarity
+
+markdown_extensions:
+  - codehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - admonition
+extra_javascript:
+  - https://unpkg.com/mermaid@8.4.4/dist/mermaid.min.js
+
+nav:
+  - Convolutional Auto-encoder: index.md
+  - Creating Embeddings: creating_embeddings.md
+  - Finding Similar Images: image_simi.md
+  - Finding Similar Features: image_features.md
+  - Clustering Images: image_cluster.md 
