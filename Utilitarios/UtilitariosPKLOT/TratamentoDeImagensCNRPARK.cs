@@ -13,12 +13,21 @@ namespace Utilitarios
             var contadorVazia = 0;
             var contadorOcupada = 0;
 
+            var contadorTreinamentoVazia = 0;
+            var contadorTreinamentoOcupada = 0;
+
+            const int TOTAL_IMAGENS_TREINAMENTO_VAZIAS = 50;
+            const int TOTAL_IMAGENS_TREINAMENTO_OCUPADAS = 50;
+
             var dirBaseEntrada = @"C:\TCC_ForaDoOneDrive\CNRPark-Patches-150x150";
             var estacionamento = "A";
 
             var dirBaseSaidaTreinamento = @"C:\TCC_ForaDoOneDrive\CNRPark-Patches-150x150\A - Imagens tratadas - treinamento";
             var dirBaseSaidaBusca = @"C:\TCC_ForaDoOneDrive\CNRPark-Patches-150x150\A - Imagens tratadas - busca";
 
+            // Criar os diretórios de saída, caso não existam
+            Directory.CreateDirectory(dirBaseSaidaTreinamento);
+            Directory.CreateDirectory(dirBaseSaidaBusca);
 
             var diretorio = Path.Combine(dirBaseEntrada, estacionamento);
 
@@ -33,14 +42,6 @@ namespace Utilitarios
 
                 foreach (var arquivoOrigem in arquivos)
                 {
-                    contador++;
-
-                    Console.WriteLine("         " + arquivoOrigem);
-
-                    ////Copiar arquivo para o diretorio de saida
-                    //var diretorioDeSaida = Path.Combine(dirBaseSaida, estacionamento, numeroVaga);
-                    //Directory.CreateDirectory(diretorioDeSaida);
-
                     var tipoImagem = "error_";
 
                     if (arquivoOrigem.Contains("free"))
@@ -54,15 +55,35 @@ namespace Utilitarios
                         contadorOcupada++;
                     }
 
-                    //Random rnd = new Random();
-                    //int dice = rnd.Next(1, 7);   // creates a number between 1 and 6
-                    //int card = rnd.Next(52);     // creates a number between 0 and 51
+                    var nomeImagemDestino = tipoImagem + Path.GetFileName(arquivoOrigem);
+                    var caminhoCompletoImagemDestino = Path.Combine(dirBaseSaidaBusca, nomeImagemDestino);
 
-                    //var arquivoSaida = tipoImagem + clima + "_" + Path.GetFileName(arquivoOrigem);
+                    // Escolher aleatoriamente as imagens de treinamento
+                    Random rnd = new Random();
+                    int aleatorio = rnd.Next(9);     // numero aleatório entre 0 e 9
+                    if (aleatorio == 0)
+                    {
+                        if (tipoImagem == "free_" && contadorTreinamentoVazia < TOTAL_IMAGENS_TREINAMENTO_VAZIAS ||
+                            tipoImagem == "busy_" && contadorTreinamentoOcupada < TOTAL_IMAGENS_TREINAMENTO_OCUPADAS)
+                        {
+                            // copiar imagem para diretorio de treinamento
+                            caminhoCompletoImagemDestino = Path.Combine(dirBaseSaidaTreinamento, nomeImagemDestino);
 
-                    //var destino = Path.Combine(diretorioDeSaida, arquivoSaida);
+                            if (tipoImagem == "free_")
+                            {
+                                contadorTreinamentoVazia++;
+                            }
+                            else
+                            { 
+                                contadorTreinamentoOcupada++; 
+                            }
+                        }
+                    }
+                    
+                    File.Copy(arquivoOrigem, caminhoCompletoImagemDestino);
 
-                    //File.Copy(origem, destino);
+                    contador++;
+                    Console.WriteLine("         " + arquivoOrigem);
                 }
             }
 
