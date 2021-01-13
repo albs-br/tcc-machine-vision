@@ -1,0 +1,13 @@
+C:\Users\albs_\OneDrive\Documentos\Pós IA\TCC\UtilitariosPKLOT\UtilitariosPKLOT\bin\Debug\netcoreapp3.1\Utilitarios.exe
+C:\Users\albs_\OneDrive\Documentos\Pós IA\TCC\UtilitariosPKLOT\UtilitariosPKLOT\bin\Debug\netcoreapp3.1\Utilitarios.deps.json
+C:\Users\albs_\OneDrive\Documentos\Pós IA\TCC\UtilitariosPKLOT\UtilitariosPKLOT\bin\Debug\netcoreapp3.1\Utilitarios.runtimeconfig.json
+C:\Users\albs_\OneDrive\Documentos\Pós IA\TCC\UtilitariosPKLOT\UtilitariosPKLOT\bin\Debug\netcoreapp3.1\Utilitarios.runtimeconfig.dev.json
+C:\Users\albs_\OneDrive\Documentos\Pós IA\TCC\UtilitariosPKLOT\UtilitariosPKLOT\bin\Debug\netcoreapp3.1\Utilitarios.dll
+C:\Users\albs_\OneDrive\Documentos\Pós IA\TCC\UtilitariosPKLOT\UtilitariosPKLOT\bin\Debug\netcoreapp3.1\Utilitarios.pdb
+C:\Users\albs_\OneDrive\Documentos\Pós IA\TCC\UtilitariosPKLOT\UtilitariosPKLOT\obj\Debug\netcoreapp3.1\Utilitarios.csprojAssemblyReference.cache
+C:\Users\albs_\OneDrive\Documentos\Pós IA\TCC\UtilitariosPKLOT\UtilitariosPKLOT\obj\Debug\netcoreapp3.1\Utilitarios.AssemblyInfoInputs.cache
+C:\Users\albs_\OneDrive\Documentos\Pós IA\TCC\UtilitariosPKLOT\UtilitariosPKLOT\obj\Debug\netcoreapp3.1\Utilitarios.AssemblyInfo.cs
+C:\Users\albs_\OneDrive\Documentos\Pós IA\TCC\UtilitariosPKLOT\UtilitariosPKLOT\obj\Debug\netcoreapp3.1\Utilitarios.csproj.CoreCompileInputs.cache
+C:\Users\albs_\OneDrive\Documentos\Pós IA\TCC\UtilitariosPKLOT\UtilitariosPKLOT\obj\Debug\netcoreapp3.1\Utilitarios.dll
+C:\Users\albs_\OneDrive\Documentos\Pós IA\TCC\UtilitariosPKLOT\UtilitariosPKLOT\obj\Debug\netcoreapp3.1\Utilitarios.pdb
+C:\Users\albs_\OneDrive\Documentos\Pós IA\TCC\UtilitariosPKLOT\UtilitariosPKLOT\obj\Debug\netcoreapp3.1\Utilitarios.genruntimeconfig.cache
